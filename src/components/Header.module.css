@@ -4,6 +4,7 @@
   z-index: 0;
   overflow: hidden;
   border-bottom: 2px solid rgb(69, 100, 76);
+  margin-bottom: 1rem;
 
   display: flex;
   justify-content: space-between;
@@ -28,5 +29,29 @@ input[type='date'] {
   max-width: 80%;
   border-radius: 27px;
   text-align: center;
-  border: 2px solid rgb(69, 100, 76);
+  border: 2px solid #154854;
+}
+
+.datos-empresa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #154854;
+  color: #fff;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.datos-empresa > * {
+  display: flex;
+  align-items: center;
+}
+
+.datos-empresa svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.datos-empresa small {
+  text-align: start;
 }

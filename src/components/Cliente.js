@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import classes from './Cliente.module.css';
 
 const Cliente = () => {
   const [clientes, setClientes] = useState([]);
@@ -24,7 +25,7 @@ const Cliente = () => {
   }, [clienteSeleccionado]);
 
   return (
-    <div>
+    <div className={classes['seccion-cliente']}>
       <h2>Cliente:</h2>
       <form>
         <select
