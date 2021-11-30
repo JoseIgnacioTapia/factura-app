@@ -27,7 +27,7 @@ function App() {
     if (!printRef.current) return;
 
     html2pdf(printRef.current, {
-      margin: 2,
+      margin: 1,
       fileName: 'Invoice.pdf',
       image: { type: 'png', quality: 1 },
       html2canvas: { scale: 2 },
@@ -36,17 +36,17 @@ function App() {
   };
 
   return (
-    <Layout>
-      <form ref={printRef} onSubmit={handleSubmit}>
-        <Header />
-        <Cliente />
+    <Layout ref={printRef}>
+      <Header />
+      <Cliente />
+      <form>
         <InvoiceLineItems lineItems={lineItems} setLineItems={setLineItems} />
         <Total lineItems={lineItems} />
         <button type="button" onClick={addLineItem}>
           Agregar Item
         </button>
-        <button type="submit">Descargar PDF</button>
       </form>
+      <button onClick={handleSubmit}>Descargar PDF</button>
     </Layout>
   );
 }
