@@ -34,3 +34,14 @@ input {
   color: #120c38;
   font-weight: 600;
 }
+
+.add-btn {
+  border: none;
+  padding: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #e3c66c;
+}

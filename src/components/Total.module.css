@@ -1,0 +1,13 @@
+.total {
+  margin-top: 1rem;
+  margin-left: 80%;
+  padding: 2rem;
+  background-color: #154854;
+  color: #fff;
+  font-weight: 600;
+  font-size: large;
+}
+
+.total p {
+  margin: 0;
+}
