@@ -1,0 +1,32 @@
+.main-image {
+  width: 100%;
+  height: 8rem;
+  z-index: 0;
+  overflow: hidden;
+  border-bottom: 2px solid rgb(69, 100, 76);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-image img {
+  width: 7rem;
+  height: 80%;
+  object-fit: cover;
+}
+
+input[type='date'] {
+  font-size: 24px;
+  color: var(--primary-text);
+  font-weight: 600;
+}
+
+.date {
+  width: 15rem;
+  height: 49px;
+  max-width: 80%;
+  border-radius: 27px;
+  text-align: center;
+  border: 2px solid rgb(69, 100, 76);
+}

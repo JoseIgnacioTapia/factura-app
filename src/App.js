@@ -27,7 +27,7 @@ function App() {
     if (!printRef.current) return;
 
     html2pdf(printRef.current, {
-      margin: 1,
+      margin: 2,
       fileName: 'Invoice.pdf',
       image: { type: 'png', quality: 1 },
       html2canvas: { scale: 2 },
