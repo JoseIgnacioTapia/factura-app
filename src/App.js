@@ -3,6 +3,9 @@ import html2pdf from 'html2pdf.js';
 
 import InvoiceLineItems from './components/InvoiceLineItems';
 import Total from './components/Total';
+import Layout from './components/Layout';
+import Header from './components/Header';
+import Cliente from './components/Cliente';
 
 const lineItem = (description = '', quantity = 1, unitPrice = 1) => ({
   description,
@@ -33,15 +36,18 @@ function App() {
   };
 
   return (
-    <form ref={printRef} onSubmit={handleSubmit}>
-      <h1>Factura</h1>
-      <InvoiceLineItems lineItems={lineItems} setLineItems={setLineItems} />
-      <Total lineItems={lineItems} />
-      <button type="button" onClick={addLineItem}>
-        Agregar Item
-      </button>
-      <button type="submit">Descargar PDF</button>
-    </form>
+    <Layout>
+      <form ref={printRef} onSubmit={handleSubmit}>
+        <Header />
+        <Cliente />
+        <InvoiceLineItems lineItems={lineItems} setLineItems={setLineItems} />
+        <Total lineItems={lineItems} />
+        <button type="button" onClick={addLineItem}>
+          Agregar Item
+        </button>
+        <button type="submit">Descargar PDF</button>
+      </form>
+    </Layout>
   );
 }
 
