@@ -4,10 +4,24 @@
   margin-bottom: 1rem;
 }
 
+.seccion-cliente h2 {
+  text-decoration: underline #333;
+  margin-bottom: 0.5rem;
+}
+
+.seccion-cliente label {
+  text-decoration: underline #333;
+  margin-right: 1rem;
+}
+
 .seccion-cliente input,
 .seccion-cliente select {
   border-radius: 27px;
   text-align: center;
   border: 2px solid #154854;
   margin-right: 1rem;
+}
+
+.seccion-cliente input[name='id'] {
+  width: 10rem;
 }

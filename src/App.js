@@ -43,8 +43,8 @@ function App() {
         <InvoiceLineItems lineItems={lineItems} setLineItems={setLineItems} />
         <button className="add-btn" type="button" onClick={addLineItem}>
           <svg
-            width="20"
-            height="20"
+            width="37"
+            height="28"
             class="w-6 h-6"
             fill="#154854"
             stroke="currentColor"
