@@ -6,6 +6,6 @@ Instalar las dependencias con:
 
 ### `npm install`
 
-Luego:
+Luego ejecutar:
 
 ### `npm start`
