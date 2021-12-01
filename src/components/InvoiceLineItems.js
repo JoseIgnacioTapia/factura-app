@@ -1,3 +1,5 @@
+import classes from './InvoiceLineItems.module.css';
+
 const InvoiceLineItems = ({ lineItems, setLineItems }) => {
   const handleLineItemChange = (event, index) => {
     setLineItems([
@@ -36,10 +38,13 @@ const InvoiceLineItems = ({ lineItems, setLineItems }) => {
         {lineItems.map((lineItem, index) => {
           const { description, unitPrice, quantity } = lineItem;
 
-          const importe = unitPrice * quantity;
+          const importe = (unitPrice * quantity).toFixed(2);
 
           return (
-            <div key={`invoiceLine-${index}`}>
+            <div
+              key={`invoiceLine-${index}`}
+              className={classes['line-inputs']}
+            >
               <span>
                 <input
                   name="quantity"
@@ -71,9 +76,13 @@ const InvoiceLineItems = ({ lineItems, setLineItems }) => {
                   }}
                 />
               </span>
-              <span>{importe}</span>
+              <span className={classes.importe}>${importe}</span>
               {lineItems.length > 1 && (
-                <button type="button" onClick={() => removeLineItem(index)}>
+                <button
+                  className={classes['btn-delete']}
+                  type="button"
+                  onClick={() => removeLineItem(index)}
+                >
                   X
                 </button>
               )}
