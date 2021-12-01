@@ -10,3 +10,12 @@
 .total p {
   margin: 0;
 }
+
+/* Responsive */
+@media (max-width: 767px) {
+  .total {
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+  }
+}

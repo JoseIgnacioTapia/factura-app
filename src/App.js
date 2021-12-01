@@ -7,7 +7,7 @@ import Layout from './components/Layout';
 import Header from './components/Header';
 import Cliente from './components/Cliente';
 
-const lineItem = (description = '', quantity = 1, unitPrice = 1) => ({
+const lineItem = (description = '', quantity = 0, unitPrice = 0) => ({
   description,
   quantity,
   unitPrice,
@@ -27,7 +27,7 @@ function App() {
     if (!printRef.current) return;
 
     html2pdf(printRef.current, {
-      margin: -0.5,
+      margin: 0,
       fileName: 'Invoice.pdf',
       image: { type: 'png', quality: 1 },
       html2canvas: { scale: 2 },

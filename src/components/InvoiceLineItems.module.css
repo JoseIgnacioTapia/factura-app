@@ -27,6 +27,10 @@ tr:last-child {
   border-top: none;
 }
 
+input::placeholder {
+  color: transparent;
+}
+
 .importe {
   display: inline-block;
   width: 3rem;
@@ -51,4 +55,50 @@ tr:last-child {
 
 .btn-delete:hover {
   background: #e3c66c;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .line-inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .line-inputs input {
+    text-align: center;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .line-inputs span {
+    display: block;
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .importe {
+    font-size: 18px;
+  }
+
+  .line-inputs .importe::before {
+    content: 'Importe';
+    margin-right: 3rem;
+    color: #154854;
+  }
+
+  .btn-delete {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  tr {
+    display: none;
+  }
+
+  input::placeholder {
+    color: rgb(128, 127, 127);
+  }
 }

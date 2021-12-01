@@ -48,8 +48,9 @@ const InvoiceLineItems = ({ lineItems, setLineItems }) => {
               <span>
                 <input
                   name="quantity"
+                  placeholder="Cantidad"
                   type="number"
-                  value={quantity}
+                  value={quantity === 0 ? '' : quantity}
                   onChange={event => {
                     handleLineItemChange(event, index);
                   }}
@@ -58,6 +59,7 @@ const InvoiceLineItems = ({ lineItems, setLineItems }) => {
               <span>
                 <input
                   name="description"
+                  placeholder="descripción"
                   type="text"
                   value={description}
                   onChange={event => {
@@ -69,6 +71,7 @@ const InvoiceLineItems = ({ lineItems, setLineItems }) => {
               <span>
                 <input
                   name="unitPrice"
+                  placeholder="Precio Unitario"
                   type="number"
                   vaue={unitPrice}
                   onChange={event => {
@@ -76,7 +79,9 @@ const InvoiceLineItems = ({ lineItems, setLineItems }) => {
                   }}
                 />
               </span>
-              <span className={classes.importe}>${importe}</span>
+              <span className={classes.importe}>
+                ${quantity === 1 ? '0' : importe}
+              </span>
               {lineItems.length > 1 && (
                 <button
                   className={classes['btn-delete']}

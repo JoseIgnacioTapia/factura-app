@@ -25,3 +25,29 @@
 .seccion-cliente input[name='id'] {
   width: 10rem;
 }
+
+.form-cliente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1099px) {
+  .form-cliente {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .form-cliente > * {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 615px) {
+  .form-cliente > * {
+    display: flex;
+    flex-direction: column;
+  }
+}

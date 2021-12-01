@@ -56,3 +56,26 @@ input[type='date'] {
 .datos-empresa small {
   text-align: start;
 }
+
+/* Responsive */
+@media (max-width: 800px) {
+  .main-image {
+    justify-content: space-around;
+  }
+
+  .date {
+    width: 10rem;
+    height: 40px;
+    max-width: 80%;
+    border-radius: 27px;
+    text-align: center;
+    border: 2px solid #154854;
+    cursor: pointer;
+  }
+
+  input[type='date'] {
+    font-size: 16px;
+    color: var(--primary-text);
+    font-weight: 600;
+  }
+}
