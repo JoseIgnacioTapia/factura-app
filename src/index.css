@@ -12,6 +12,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: aliceblue;
+  margin-bottom: 2rem;
+  width: 100vw;
+  /* overflow: hidden; */
+  height: 100%;
+  margin-bottom: 2rem;
 }
 
 input {
@@ -36,15 +41,22 @@ input {
 }
 
 .add-btn {
-  width: 3rem;
-  height: 3rem;
   border: none;
-  padding: 3px;
-  background: transparent;
+  padding-top: 1rem;
+  background: #e3c66c;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
 }
 
 .add-btn:hover {
   background: #e3c66c;
+}
+
+/* 1014px */
+@media (min: 1014px) {
+  body {
+    min-width: 100%;
+  }
 }

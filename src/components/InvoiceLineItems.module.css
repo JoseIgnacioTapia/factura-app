@@ -46,15 +46,22 @@ input::placeholder {
   margin-top: -1rem;
   border: none;
   background: transparent;
-  color: rgb(248, 25, 25);
+  /* color: rgb(248, 25, 25); */
+  color: transparent;
   font-weight: bold;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease-out;
+  transition: color 1.5s ease-out;
+}
+
+.line-inputs > *:hover ~ button {
+  color: rgb(248, 25, 25);
 }
 
 .btn-delete:hover {
   background: #e3c66c;
+  color: rgb(248, 25, 25);
 }
 
 /* Responsive */

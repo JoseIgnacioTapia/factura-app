@@ -42,27 +42,12 @@ function App() {
         <Cliente />
         <form>
           <InvoiceLineItems lineItems={lineItems} setLineItems={setLineItems} />
-          <button className="add-btn" type="button" onClick={addLineItem}>
-            <svg
-              width="37"
-              height="28"
-              class="w-6 h-6"
-              fill="#154854"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-              ></path>
-            </svg>
-          </button>
           <Total lineItems={lineItems} />
         </form>
       </Layout>
+      <button className="add-btn" type="button" onClick={addLineItem}>
+        Agregar Item
+      </button>
       <button onClick={handleSubmit}>
         Generar PDF
         <svg
